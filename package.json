@@ -1,8 +1,8 @@
 {
-  "name": "tslint-config-pikadude",
+  "name": "eslint-config-pikadude-ts",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/PikaDude/tslint-config-pikadude.git",
+  "repository": "https://github.com/PikaDude/eslint-config-pikadude-ts.git",
   "author": "PikaDude <mail@pikadude.me>",
   "license": "MIT",
   "scripts": {

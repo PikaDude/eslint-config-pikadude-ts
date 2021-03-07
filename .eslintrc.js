@@ -1,3 +1,3 @@
 module.exports = {
-    extends: 'pikadude',
+    extends: 'pikadude-ts',
 };
