@@ -26,19 +26,24 @@ module.exports = {
             rules: {
                 'no-async-promise-executor': 0,
                 'prefer-const': [
-                    'error',
+                    'warn',
                     {
                         destructuring: 'any',
                         ignoreReadBeforeAssign: false,
                     },
                 ],
+                'simple-import-sort/imports': 'warn',
+                'simple-import-sort/exports': 'warn',
+                'import/first': 'error',
+                'import/newline-after-import': 'error',
+                'import/no-duplicates': 'error'
             },
         },
     ],
     rules: {
         'linebreak-style': ['warn', 'unix'],
         'prettier/prettier': [
-            'error',
+            'warn',
             {
                 semi: true,
                 arrowParens: 'always',
