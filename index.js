@@ -42,7 +42,7 @@ module.exports = {
             },
         },
     ],
-    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import', 'sort-keys-fix', 'eslint-plugin-sort-keys-fix'],
+    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import', 'sort-keys-fix', 'sort-keys-fix'],
     rules: {
         'linebreak-style': ['warn', 'unix'],
         'prettier/prettier': [
