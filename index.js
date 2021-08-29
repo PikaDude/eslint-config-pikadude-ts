@@ -1,13 +1,12 @@
 module.exports = {
     env: {
-        node: true,
         es2021: true,
+        node: true,
     },
-    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import'],
     overrides: [
         {
-            files: ['*.json'],
             extends: ['plugin:json/recommended'],
+            files: ['*.json'],
             plugins: ['json'],
             rules: {
                 'json/*': ['error', 'allowComments'],
@@ -15,15 +14,18 @@ module.exports = {
             },
         },
         {
+            extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
             files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 ecmaVersion: 2021,
-                sourceType: 'module',
                 project: './tsconfig.json',
+                sourceType: 'module',
             },
-            extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
             rules: {
+                'import/first': 'error',
+                'import/newline-after-import': 'error',
+                'import/no-duplicates': 'error',
                 'no-async-promise-executor': 0,
                 'prefer-const': [
                     'warn',
@@ -32,24 +34,25 @@ module.exports = {
                         ignoreReadBeforeAssign: false,
                     },
                 ],
-                'simple-import-sort/imports': 'warn',
                 'simple-import-sort/exports': 'warn',
-                'import/first': 'error',
-                'import/newline-after-import': 'error',
-                'import/no-duplicates': 'error'
+                'simple-import-sort/imports': 'warn',
+                'sort-keys-fix/sort-keys-fix': 'warn',
+                'typescript-sort-keys/interface': 'warn',
+                'typescript-sort-keys/string-enum': 'warn',
             },
         },
     ],
+    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import', 'sort-keys-fix', 'eslint-plugin-sort-keys-fix'],
     rules: {
         'linebreak-style': ['warn', 'unix'],
         'prettier/prettier': [
             'warn',
             {
-                semi: true,
                 arrowParens: 'always',
+                printWidth: 150,
+                semi: true,
                 singleQuote: true,
                 tabWidth: 4,
-                printWidth: 150,
             },
         ],
     },
