@@ -37,7 +37,7 @@ module.exports = {
                 'simple-import-sort/exports': 'warn',
                 'simple-import-sort/imports': 'warn',
                 'sort-keys-fix/sort-keys-fix': 'warn',
-                'typescript-sort-keys/interface': 'warn',
+                'typescript-sort-keys/interface': ['warn', 'asc', { requiredFirst: true }],
                 'typescript-sort-keys/string-enum': 'warn',
             },
         },
