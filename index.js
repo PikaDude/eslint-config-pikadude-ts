@@ -23,9 +23,9 @@ module.exports = {
                 sourceType: 'module',
             },
             rules: {
-                'import/first': 'error',
-                'import/newline-after-import': 'error',
-                'import/no-duplicates': 'error',
+                'import/first': 'warn',
+                'import/newline-after-import': 'warn',
+                'import/no-duplicates': 'warn',
                 'no-async-promise-executor': 0,
                 'prefer-const': [
                     'warn',
@@ -39,6 +39,7 @@ module.exports = {
                 'sort-keys-fix/sort-keys-fix': 'warn',
                 'typescript-sort-keys/interface': ['warn', 'asc', { requiredFirst: true }],
                 'typescript-sort-keys/string-enum': 'warn',
+                'no-non-null-assertion': 'off',
             },
         },
     ],
