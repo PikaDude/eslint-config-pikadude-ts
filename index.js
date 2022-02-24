@@ -39,7 +39,7 @@ module.exports = {
                 'sort-keys-fix/sort-keys-fix': 'warn',
                 'typescript-sort-keys/interface': ['warn', 'asc', { requiredFirst: true }],
                 'typescript-sort-keys/string-enum': 'warn',
-                'no-non-null-assertion': 'off',
+                'curly': ['warn', 'multi-line'],
             },
         },
     ],
