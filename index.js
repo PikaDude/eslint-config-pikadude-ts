@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-        es2021: true,
+        es2022: true,
         node: true,
     },
     overrides: [
@@ -18,7 +18,7 @@ module.exports = {
             files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
-                ecmaVersion: 2021,
+                ecmaVersion: 2022,
                 project: './tsconfig.json',
                 sourceType: 'module',
             },
@@ -36,14 +36,17 @@ module.exports = {
                 ],
                 'simple-import-sort/exports': 'warn',
                 'simple-import-sort/imports': 'warn',
-                'sort-keys-fix/sort-keys-fix': 'warn',
                 'typescript-sort-keys/interface': ['warn', 'asc', { requiredFirst: true }],
                 'typescript-sort-keys/string-enum': 'warn',
-                'curly': ['warn', 'multi-line'],
+                curly: ['warn', 'multi-line'],
+                'sort-keys': 'warn',
+                '@typescript-eslint/explicit-function-return-type': 'warn',
+                'require-await': 'off',
+                '@typescript-eslint/require-await': 'error',
             },
         },
     ],
-    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import', 'sort-keys-fix', 'typescript-sort-keys'],
+    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import', 'typescript-sort-keys'],
     rules: {
         'linebreak-style': ['warn', 'unix'],
         'prettier/prettier': [
