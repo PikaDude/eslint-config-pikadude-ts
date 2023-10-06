@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pikadude-ts",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "index.js",
   "repository": "https://github.com/PikaDude/eslint-config-pikadude-ts.git",
   "author": "PikaDude <mail@pikadude.me>",

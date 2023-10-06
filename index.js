@@ -42,7 +42,7 @@ module.exports = {
                 'sort-keys': 'warn',
                 '@typescript-eslint/explicit-function-return-type': 'warn',
                 'require-await': 'off',
-                '@typescript-eslint/require-await': 'error',
+                '@typescript-eslint/require-await': 'warn',
             },
         },
     ],
