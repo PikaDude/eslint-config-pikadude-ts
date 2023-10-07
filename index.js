@@ -14,7 +14,7 @@ module.exports = {
             },
         },
         {
-            extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+            extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended-type-checked', 'plugin:prettier/recommended'],
             files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
@@ -23,10 +23,11 @@ module.exports = {
                 sourceType: 'module',
             },
             rules: {
+                '@typescript-eslint/explicit-module-boundary-types': 'warn',
+                curly: ['warn', 'multi-line'],
                 'import/first': 'warn',
                 'import/newline-after-import': 'warn',
                 'import/no-duplicates': 'warn',
-                'no-async-promise-executor': 0,
                 'prefer-const': [
                     'warn',
                     {
@@ -34,19 +35,24 @@ module.exports = {
                         ignoreReadBeforeAssign: false,
                     },
                 ],
+                'prettier/prettier': 'warn',
                 'simple-import-sort/exports': 'warn',
                 'simple-import-sort/imports': 'warn',
+                'sort-keys-fix/sort-keys-fix': 'warn',
                 'typescript-sort-keys/interface': ['warn', 'asc', { requiredFirst: true }],
                 'typescript-sort-keys/string-enum': 'warn',
-                curly: ['warn', 'multi-line'],
-                'sort-keys': 'warn',
-                '@typescript-eslint/explicit-module-boundary-types': 'warn',
-                'require-await': 'off',
-                '@typescript-eslint/require-await': 'warn',
             },
         },
     ],
-    plugins: ['prettier', '@typescript-eslint', 'unused-imports', 'simple-import-sort', 'import', 'typescript-sort-keys'],
+    plugins: [
+        'only-warn',
+        '@typescript-eslint',
+        'prettier',
+        'import',
+        'simple-import-sort', // sort imports
+        'typescript-sort-keys', // sort interface and enum keys
+        'sort-keys-fix', // sort object keys
+    ],
     rules: {
         'linebreak-style': ['warn', 'unix'],
         'prettier/prettier': [

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pikadude-ts",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "main": "index.js",
   "repository": "https://github.com/PikaDude/eslint-config-pikadude-ts.git",
   "author": "PikaDude <mail@pikadude.me>",
@@ -11,19 +11,17 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
-    "eslint": "^8.50.0",
+    "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sort-class-members": "^1.19.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-typescript-sort-keys": "^3.0.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.2"
   }
 }
