@@ -40,7 +40,7 @@ module.exports = {
                 'typescript-sort-keys/string-enum': 'warn',
                 curly: ['warn', 'multi-line'],
                 'sort-keys': 'warn',
-                '@typescript-eslint/explicit-function-return-type': 'warn',
+                '@typescript-eslint/explicit-module-boundary-types': 'warn',
                 'require-await': 'off',
                 '@typescript-eslint/require-await': 'warn',
             },
